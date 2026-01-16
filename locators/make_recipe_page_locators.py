@@ -1,0 +1,21 @@
+from selenium.webdriver.common.by import By
+
+
+class RecipePageLocators:
+
+    RECIPE_NAME_INPUT = (By.XPATH, "//label[.//div[text()='Название рецепта']]/input")
+    INGREDIENT_INPUT = (By.XPATH, "//label[.//div[contains(text(), 'Ингредиенты')]]/input")
+    INGREDIENT_QUANTITY_INPUT = (By.XPATH, "//div[contains(@class, 'styles_ingredientsAmountInput__1F2dx')]//input")
+    RECIPE_COOKING_TIME_INPUT = (By.XPATH, "//label[.//div[contains(text(), 'Время приготовления')]]/input")
+    RECIPE_DESCRIPTION_INPUT = (By.XPATH, "//label[.//div[text()='Описание рецепта']]/textarea")
+    CREATE_RECIPE_BUTTON = (By.XPATH, "//button[text()='Создать рецепт']")
+    ADD_INGREDIENT_BUTTON = (By.XPATH, "//div[text()='Добавить ингредиент']")
+    INGREDIENT_SUGGESTION_ITEM = (
+        By.XPATH,
+        "//div[@class='styles_container__3ukwm']//*[contains(normalize-space(.), '{}')]"
+    )
+    FILE_INPUT = (By.XPATH, "//input[@type='file']")
+    TAG_CHECKBOX = (
+        By.XPATH,
+        "//div[contains(@class, 'styles_checkbox-container')][.//span[normalize-space(.)='{}']]//button"
+    )
